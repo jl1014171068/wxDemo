@@ -1,0 +1,74 @@
+<view class="goods">
+    <view class="goods-content">
+        <view class='goods-left'>
+            <scroll-view scroll-y="true" style="height: {{ scrollHeight }}rpx">
+                <view bindtap='selectMenu' data-index="{{index}}" data-id="custom_{{item.id}}" class="goods-left-title {{ currentleftmenu == index ? 'active' : '' }}" wx:for="{{pageData}}" wx:key="{{index}}">
+                    {{ item.name }}
+                </view>
+            </scroll-view>
+        </view>
+        <view class='goods-right'>
+            <scroll-view scroll-y="true" scroll-with-animation="true" scroll-into-view="{{ currentmenuid }}" style="height: {{ scrollHeight - needDistance }}rpx">
+                <view class='goods-right-section' id="custom_{{ item.id }}" wx:for="{{pageData}}" wx:key="{{index}}1">
+                    <view class='goods-right-title'>{{item.name}}</view>
+                    <view wx:for="{{item.foods}}" wx:for-item="list" wx:for-index="ind" wx:key="{{ind}}2">
+                        <view class='goods-right-item'>
+                            <view class='imgs'>
+                                <image src='{{list.image}}'></image>
+                            </view>
+                            <view class='goods-right-cont-rg'>
+                                <view class='name'>{{list.name}}</view>
+                                <view class='price'>¥ {{list.price}}</view>
+                            </view>
+                            <view class='setting'>
+                                <view wx:if="{{list.count}}">
+                                    <image bindtap='handleCart' data-list="{{list}}" data-itemIndex="{{index}}" data-listIndex="{{ind}}" data-setting="min" src='/static/images/icon/min.png'></image>
+                                </view>
+                                <view wx:if="{{list.count}}" class='text'>{{list.count||0}}</view>
+                                <view>
+                                    <image bindtap='handleCart' data-list="{{list}}" data-itemIndex="{{index}}" data-listIndex="{{ind}}" data-setting="add" src='/static/images/icon/add.png'></image>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+    <view class='goods-footer'>
+        <view class='goods-cart'>
+            <view class='icon' bindtap='handleCartList'>
+                <image wx:if="{{!allCount}}" src='/static/images/icon/cart-empty.png'></image>
+                <image wx:if="{{allCount}}" src='/static/images/icon/cart.png'></image>
+                <view wx:if="{{allCount}}" class='sub'>{{allCount}}</view>
+            </view>
+            <view class='goods-allPrice'>¥ {{money}}</view>
+            <view class='submit {{allCount?"":"disabled" }}' bindtap='onSubmit'>选好了</view>
+        </view>
+    </view>
+    <view class='goods-cart-list' wx:if="{{cardFlag}}">
+        <view class='cart-list-head'>
+            <view class='legend'></view>
+            已选商品
+        </view>
+        <scroll-view class='goods-cart-goods' scroll-y="true" style="height: 500rpx">
+            <view class='goods-right-cartlist' wx:for="{{goods}}" wx:key="{{index}}3">
+                <view class='item-left'>
+                    <view class='item-name'>{{item.name}}</view>
+                    <view class='item-des'>牛肉</view>
+                </view>
+                <view class='item-price'>¥ {{item.price}}</view>
+                <view class='setting'>
+                    <view wx:if="{{item.count}}">
+                        <image bindtap='handleCartMin' data-list="{{item}}" data-index="{{index}}" data-setting="min" src='/static/images/icon/min.png'></image>
+                    </view>
+                    <view wx:if="{{item.count}}" class='text'>{{item.count||0}}</view>
+                    <view>
+                        <image bindtap='handleCartMin' data-list="{{item}}" data-index="{{index}}" data-setting="add" src='/static/images/icon/add.png'></image>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+     <view class='zz' bindtap='handleCartList' wx:if="{{cardFlag}}"></view> 
+</view>

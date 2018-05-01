@@ -1,0 +1,56 @@
+<view class='shopDetail'>
+    <view class='shopDetail '>
+        <view class='shopDetail-item default-double'>
+            <view class='left-item'>取餐时间</view>
+            <view class='right-item'>
+                <picker class="weui-btn" mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="changeTime">
+                    {{time}}
+                </picker>
+            </view>
+        </view>
+        <view class='hr'></view>
+        <view class='order-detail'>
+            <view class='order-detail-title'>订单详情</view>
+            <view class='order-detail-list' wx:for="{{pageInfo.goods}}">
+                <view class='order-list-top'>
+                    <view class='order-list-left'>
+                        <view class='text'>{{item.name}}</view>
+                        <view class='des'>草莓酸菜</view>
+                    </view>
+                    <view class='count'>x {{item.count}}</view>
+                </view>
+                <view class='number'>{{item.price}}</view>
+            </view>
+        </view>
+        <view class='hr'></view>
+        <view class='order-info'>
+            <view class='quan default-double'>
+                <view class='left-item'>取餐时间</view>
+                <view class='right-item'>
+                    没有优惠券>
+                </view>
+            </view>
+            <view class='order-result'><view>总计：<view>¥ {{pageInfo.money}}</view></view></view>
+        </view>
+        <view class='hr'></view>
+        <view class='fk'>
+            <view class='title'>备注</view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    <textarea class="weui-textarea" placeholder="请输入文本" style="height:100rpx" />
+                    <view class="weui-textarea-counter">0/200</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class='goods-footer'>
+        <view class='goods-cart'>
+            <view class='icon' bindtap='handleCartList'>
+                <image src='/static/images/icon/cart.png'></image>
+                <view class='sub'>{{pageInfo.allCount}}</view>
+            </view>
+            <view class='goods-allPrice'>¥ {{pageInfo.money}}</view>
+            <view class='submit' bindtap='onSubmit'>去支付</view>
+        </view>
+    </view>
+</view>

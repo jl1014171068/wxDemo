@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/my/my",
+    "pages/order/order",
+    "pages/index/index",
+    "pages/shopDetail/shopDetail",
+    "pages/shop/shop",
+    "pages/shopList/shopList",
+    "pages/logs/logs",
+    "pages/Discount/Discount"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ea5503",
+    "navigationBarTitleText": "CoCo都可",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#cccccc",
+    "selectedColor": "#ea5503",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "#b2b2b2",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/images/footer/home-no.png",
+        "selectedIconPath": "static/images/footer/home-active.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "static/images/footer/mall-no.png",
+        "selectedIconPath": "static/images/footer/mall-active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "static/images/footer/we-no.png",
+        "selectedIconPath": "static/images/footer/we-active.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

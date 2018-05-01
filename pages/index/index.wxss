@@ -1,0 +1,22 @@
+.indexPage{
+
+}
+.indexPage .banner{
+  width: 100%;
+}
+.indexPage .banner image{
+ width: 100%;
+}
+.indexPage .index-btn {}
+.indexPage .index-btn.navigator-hover{
+  background: #fff
+}
+.indexPage .index-btn image{
+  width: 100%;
+  height: 160rpx;
+}
+.indexPage .index-bottom{
+}
+.indexPage .index-bottom image{
+  width: 100%;
+}

@@ -1,0 +1,8 @@
+@import '/static/style/weui.wxss';
+/**app.wxss**/
+.container {
+  height: 100%;
+  box-sizing: border-box;
+} 
+
+/* icon */

@@ -1,0 +1,51 @@
+<view class="shop-wraper">
+    <view class="search-bar">
+        <icon class="shop-icon" type="search" size="15" color="{{searchColor}}" />
+        <input bindtap="selectMap" value="{{address}}" disabled bindinput="bindKeyInput" class="weui-input search-inp" auto-focus placeholder="请选择地址" />
+    </view>
+    <!-- 获取定位按钮 -->
+    <view class='shop-get-loc' bindtap="getLocato">
+        <i class="shop-icon shop-icon-location">
+          <image src='/static/images/icon/location.png'></image>
+       </i>
+        <span class="shop-text">点击定位当前位置</span>
+    </view>
+    <!-- 列表渲染  -->
+    <view class='shop-list'>
+        <view bindtap="changeShop" data-index="{{index}}" data-item="{{item}}" class="{{currentIndex == index ? 'active':''}}  shop-list-item" wx:if="{{item.isOpen}}" wx:for="{{datalist}}" wx:key="{{index}}">
+            <view class="shop-item-top">
+                <i class="shop-icon shop-icon-address">
+                <image src='/static/images/icon/address.png'></image>
+            </i>
+                <view class='shop-name'>
+                    {{item.shopname}}
+                    <view class="shop-address-name">
+                        {{item.address}}
+                    </view>
+                </view>
+                <view class='shop-scope'>
+                    {{item.scope}}
+                </view>
+            </view>
+            <!-- 顶部结束 -->
+            <view class="shop-handle">
+                <view class='shop-handle-title'>
+                    取餐时间：
+                </view>
+                <radio-group bindchange="radioChange">
+                    <label class="weui-cell weui-check__label" wx:for="{{radioItems}}" wx:key="value">
+                        <view class="weui-cell__ft weui-cell__ft_in-radio">
+                            <icon class="weui-icon-checkbox_circle" type="circle" size="23" wx:if="{{!item.checked}}"></icon>
+                            <icon class="weui-icon-checkbox_success" type="success" size="23" color='#ea5503' wx:if="{{item.checked}}"></icon>
+                        </view>
+                        <radio class="weui-check" value="{{item.value}}" checked="{{item.checked}}" />
+                        <view class="weui-cell__bd">{{item.name}}</view>
+                    </label>
+                </radio-group>
+                <view>
+                    <button bindtap='selectShop' class="weui-btn shop-handle-btn" type="primary">选择饮品</button>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

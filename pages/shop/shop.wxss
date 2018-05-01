@@ -1,0 +1,118 @@
+.shop-wraper{
+
+}
+.shop-wraper .search-bar{
+  border:#989898 solid 1rpx;
+  display:flex;
+  align-items: center;
+  width: 90%;
+  margin:30rpx auto;
+  padding:0 20rpx;
+  border-radius: 40rpx;
+}
+.shop-wraper .search-bar .shop-icon{
+  width: 20px;
+  margin-right: 10rpx;
+}
+.shop-wraper .search-bar .search-inp{
+  flex: 1;
+  font-size:24rpx;
+  color:#101010;
+}
+.shop-wraper .shop-get-loc{
+  background: #eeeeee;
+  border-top:#f6f6f6 solid 15rpx;
+  border-bottom:#f6f6f6 solid 15rpx;
+  display: flex;
+  align-items: center;
+  padding:  10rpx;
+}
+.shop-wraper .shop-get-loc .shop-icon-location{
+  display: flex;
+  align-items: center;
+}
+.shop-wraper .shop-get-loc .shop-icon-location image{
+  width: 50rpx;
+  height:50rpx;
+}
+.shop-wraper .shop-get-loc .shop-text{
+  font-size: 26rpx;
+  color:#ea5503;
+}
+.shop-wraper .shop-list{
+  padding:0 30rpx;
+}
+.shop-wraper .shop-list .shop-list-item{
+  border-bottom:#e5e5e5 solid 1px;
+  padding:20rpx 0;
+}
+.shop-wraper .shop-list .shop-list-item .shop-handle{
+  display: none;
+}
+.shop-wraper .shop-list .shop-list-item .shop-item-top{
+  display: flex;
+  justify-content:space-between;
+}
+.shop-wraper .shop-list .shop-list-item .shop-item-top .shop-name{
+  color:#333333;
+  font-size:32rpx;
+  flex: 1;
+}
+.shop-wraper .shop-list .shop-list-item .shop-item-top .shop-name .shop-address-name{
+  font-size: 24rpx;
+  color:#999999;
+}
+.shop-wraper .shop-list .shop-list-item .shop-item-top{
+   display: flex;
+  align-items: flex-start; 
+}
+.shop-wraper .shop-list .shop-list-item .shop-item-top .shop-icon-address{
+  align-items: center;
+  display: none;
+}
+.shop-wraper .shop-list .shop-item-top .shop-icon-address image{
+  width: 50rpx;
+  height:50rpx;
+}
+.shop-wraper .shop-list .shop-list-item .shop-item-top .shop-scope{
+  width: 140rpx;
+  text-align: right;
+  font-size: 24rpx;
+  color:#333333;
+}
+.shop-wraper .shop-list .shop-list-item.active .shop-icon-address{
+  display: flex;
+  width: 60rpx;
+}
+.shop-wraper .shop-list .shop-list-item.active{ 
+  background: #fff;
+}
+.shop-wraper .shop-list .shop-list-item.active .shop-name,
+.shop-wraper .shop-list .shop-list-item.active .shop-scope,
+.shop-wraper .shop-list .shop-list-item.active .shop-address-name{
+  color:#ea5503 !important;
+}
+.shop-wraper .shop-list .shop-list-item.active .shop-handle{
+  display: block
+}
+.shop-wraper .shop-list .shop-list-item .shop-handle .weui-cell__bd{
+  font-size:26rpx;
+  margin:12rpx 0 0 0;
+}
+.shop-wraper .shop-list .shop-list-item .shop-handle .shop-handle-title{
+  font-size:26rpx;
+  padding:30rpx 30rpx 0 30rpx;
+}
+.shop-wraper .shop-list .shop-list-item .shop-handle .weui-cell {
+  padding:10px 15px 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+.shop-wraper .shop-list .shop-list-item .shop-handle .shop-handle-btn{
+background:#ea5503 ;
+font-size:30rpx;
+}
+
+
+

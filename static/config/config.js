@@ -1,0 +1,1 @@
+export const baseUrl = 'https://easy-mock.com/mock/5ae813da3b719e1a72e52409/cocoapi';

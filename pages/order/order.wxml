@@ -1,0 +1,12 @@
+<view class='order'>
+    <view class='order-tab'>
+        <view bindtap='changeTab' data-index="0" class='order-tab-pan {{currentIndex==0?"active":""}}'>即时订单</view>
+        <view bindtap='changeTab' data-index="1" class='order-tab-pan {{currentIndex==1?"active":""}}'>预约订单</view>
+    </view>
+    <view class='order-tab-con'>
+        <view class='empty'>
+            <view class="empty-text">暂时没有订单记录</view>
+            <button bindtap='goStart' class='empty-btn'>开始点餐</button>
+        </view>
+    </view>
+</view> 

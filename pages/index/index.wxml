@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="container indexPage">
+  <view class="banner">
+    <image src='/static/images/index/banner.jpg'></image>
+  </view>
+  <navigator class="index-btn" url="/pages/shop/shop" hover-class="navigator-hover">
+   <image src='/static/images/index/index-btn.jpg'></image>
+  </navigator>
+  <view class="index-bottom">
+    <image src='/static/images/index/index-bottom.jpg'></image>
+  </view>
+</view>

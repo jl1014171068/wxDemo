@@ -1,0 +1,35 @@
+.order{}
+.order .order-tab{
+  display: flex;
+  justify-content: center;
+  margin:20rpx 0;
+}
+.order .order-tab .order-tab-pan{
+  background:#999;
+  color:#fff;
+  font-size: 26rpx;
+  width: 200rpx;
+  text-align: center;
+  padding: 10rpx 0;
+}
+.order .order-tab .order-tab-pan.active{
+  background: #ea5503;
+}
+.order-tab-con .empty{
+  height:500rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+.order-tab-con .empty .empty-text{
+  margin:20rpx 0 ;
+}
+.order-tab-con .empty .empty-btn{
+  background:#ea5503;
+  color:#fff;
+  font-size: 26rpx;
+}
+.order-tab-con .empty{}
+.order-tab-con .empty{}

@@ -1,0 +1,25 @@
+<view class="my">
+    <view class='my-top'>
+        <view class='user-info'>
+            <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+            <block wx:else>
+                <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+                <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+            </block>
+        </view>
+    </view>
+    <view class='menu-list'>
+        <navigator class='item' url="/pages/Discount/Discount" hover-class="navigator-hover">
+            <icon type="info" size="20" />
+            <view class='text'>我的优惠</view>
+        </navigator>
+        <navigator class='item' url="/pages/Discount/Discount" hover-class="navigator-hover">
+            <icon type="info" size="20" />
+            <view class='text'>1989768686</view>
+        </navigator>
+        <navigator class='item' url="/pages/Discount/Discount" hover-class="navigator-hover">
+            <icon type="info" size="20" />
+            <view class='text'>平台使用须知</view>
+        </navigator>
+    </view>
+</view>
